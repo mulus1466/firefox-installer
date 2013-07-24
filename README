@@ -4,3 +4,19 @@ Available in English and Spanish by now.
 
 Programmer: Martin "Zironid"	zironid@lavabit.com
 Translator: David "dfas98"	dfas98@gmail.com
+
+To run the script you must give it execute permissions.
+
+From a graphical file manager, right click on the script,
+ go to the "Permissions" tab and click on the cell 
+"Let execute this file like a program" (or similar).
+
+After that you can double click it, and chouse "Execute in terminal".
+
+Or from a command line:
+
+chmod +x /path/firefox-installer.sh
+
+And for execute the script:
+
+./path/firefox-installer.sh
