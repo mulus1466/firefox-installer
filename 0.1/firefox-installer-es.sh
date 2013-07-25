@@ -26,8 +26,8 @@
 # For more information, please refer to [http://unlicense.org]
 #
 # Contacto: 
-# Martin "Zironid" (Programadór): zironid@lavabit.com
-# David "dfas98" (Traductór): dfas98@gmail.com
+# Martin "Zironid" (Programador): zironid@lavabit.com
+# David "dfas98" (Traductor): dfas98@gmail.com
 #
 # No tenemos ningún tipo de relación con Firefox(mozilla.org/firefox) o Mozilla(mozilla.org).
 
@@ -40,16 +40,16 @@ echo "¡Hola! Y bienvenido a Firefox Installer, un script diseñado para que la 
 
 if [ "$UID" -ne "$ROOT_UID" ]
 then
-	echo "Para usar este script tienes que ejecutarlo como super usuario (root)."
+	echo "Para usar éste script tienes que ejecutarlo como super usuario (root)."
 	sleep 5
 	exit
 else
-	echo "Recuerda que solo root puede usar este script."
+	echo "Recuerda que sólo root puede usar éste script."
 fi
-read -p "Firefox installer creara la carpeta .firefox-installer en $HOME. ¿Está bien? (si/no) : " resd
+read -p "Firefox installer creará la carpeta .firefox-installer en $HOME. ¿Está bien? (sí/no) : " resd
 case $resd in
 	[Ss]* ) cwd=$HOME;;
-	* ) read -p "¿Desea introducir el directorio manualmente? (si/no) : " resdd
+	* ) read -p "¿Desea introducir el directorio manualmente? (sí/no) : " resdd
 	case $resdd in
 		[Ss]* ) read -p "Directorio: (Ejemplo: /home/foo) :" cwd;;
 		* ) echo "Saliendo del script..."
@@ -165,14 +165,14 @@ tar -jxf firefox-*.tar.bz2
 echo "Iniciando instalación..."
 echo "Copiando \"firefox\" a /opt..."
 cp -rf firefox /opt
-echo "creando enlaze simbólico en /usr/bin..."
+echo "creando enlace simbólico en /usr/bin..."
 if [ $(ls /usr/bin | grep firefox | wc -l) == 1 ]
 then
 	rm /usr/bin/firefox
 fi
 ln -s /opt/firefox/firefox /usr/bin/firefox
 cp /opt/firefox/browser/icons/mozicon128.png /usr/share/pixmaps/firefox.png
-echo "Añadiendo Firefox al menu"
+echo "Añadiendo Firefox al menú"
 touch /usr/share/applications/firefox.desktop
 echo -e "\n[Desktop Entry]\nName=Mozilla Firefox\nComment=Firefox-Browser\nExec=/usr/bin/firefox\nIcon=/usr/share/pixmaps/firefox.png\nTerminal=false" > /usr/share/applications/firefox.desktop
 echo -e "Type=Application\nCategories=Network;\nStartupNotify=false;\nName[en_US]=Mozilla Firefox" >> /usr/share/applications/firefox.desktop
