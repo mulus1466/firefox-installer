@@ -58,7 +58,7 @@ case $resd in
 esac
 if [ $(ls -a $cwd | grep ".firefox-installer" | wc -l) == 1 ]
 then
-	read -p "le dossier $cwd/.firefox-installer existe déjà, voulez-vous le supprimer pour pouvoir continuer ? (oui/non) : " resb
+	read -p "Le dossier $cwd/.firefox-installer existe déjà, voulez-vous le supprimer pour pouvoir continuer ? (oui/non) : " resb
 	case $resb in
 		[Oo]* ) echo "$cwd/.firefox-installer a été supprimé.";;
 		* ) echo "Arrêt du script..."
@@ -70,8 +70,8 @@ mkdir $cwd/.firefox-installer
 echo "Le dossier $cwd/.firefox-installer a été créé."
 cd $cwd/.firefox-installer
 echo "Information du système : "
-echo "Langue: $len"
-echo "Architecture: $arq"
+echo "Langue : $len"
+echo "Architecture : $arq"
 
 read -p "Est-ce que ça vous va ? (oui/non) : " res
 case $res in
@@ -101,7 +101,7 @@ case $res in
 	esac
 esac
 case $len in
-  fr ) 
+	fr ) 
 		if [ "$arq" == 32 ]
 		then
 			echo "Le téléchargement commencera dans 5 secondes..."
