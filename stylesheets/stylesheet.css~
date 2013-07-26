@@ -47,12 +47,11 @@ table {
 }
 
 /* LAYOUT STYLES */
-/* my body is ready */
 body {
   font-size: 15px;
   line-height: 1.5; 
   background: #fafafa url(../images/body-bg.jpg) 0 0 repeat;
-  font-family: Arial;
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   font-weight: 400;
   color: #666;
 }
@@ -67,7 +66,7 @@ a:hover {
 header {
   padding-top: 40px;
   padding-bottom: 40px;
-  font-family: Sans-serif; 
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
   background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
   border-bottom: solid 1px #275da1;
 }
@@ -137,7 +136,7 @@ a.button {
   color: #fff;
   padding-left: 68px;
   padding-top: 22px;
-  font-family: Arial; 
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
 }
 a.button small {
   display: block;
@@ -240,21 +239,21 @@ form {
 }
 
 #main-content h2 {
-  font-family: Arial; 
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 8px;
   color: #474747;
 } 
 #main-content h2:before {
-  content: url('../images/xcvhl.png');
+  content: "//";
   color: #9ddcff;
-  padding-right: 0.1em;
+  padding-right: 0.3em;
   margin-left: -1.5em;
 }
 
 #main-content h3 {
-  font-family: Arial; 
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
   font-size: 18px;
   font-weight: bold;
   margin-top: 24px;
@@ -270,7 +269,7 @@ form {
 }
 
 #main-content h4 {
-  font-family: Arial; 
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
   font-size: 15px;
   font-weight: bold;
   color: #474747;
@@ -284,7 +283,7 @@ h4:before {
 }
 
 #main-content h5 {
-  font-family: Arial; 
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
   font-size: 14px;
   color: #474747;
 } 
@@ -296,7 +295,7 @@ h5:before {
 }
 
 #main-content h6 {
-  font-family: Arial; 
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
   font-size: .8em;
   color: #474747;
 } 
@@ -478,5 +477,3 @@ footer a:hover {
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {}
-/*Changes made by Pythism and Zironid*/
-/*Cambios hechos por Pythism y Zironid*/
