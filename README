@@ -1,4 +1,4 @@
-Firefox Installer its a script to make easier the installation of Firefox in Debian.
+Firefox Installer is a script to make the installation of Firefox in Debian easier.
 
 Available in English, Spanish and French for now.
 
@@ -10,12 +10,12 @@ Project page: http://zironid.github.io/firefox-installer/
 To run the script you must give it execution permissions.
 
 From a graphical file manager, right click on the script,
- go to the "Permissions" tab and click on the cell 
-"Let execute this file like a program" (or similar).
+ go to the "Permissions" tab and click on the tab
+"Allow executing file as program" (or similar).
 
 After that you can double click it, and choose "Execute in terminal".
 
-Or from a command line:
+Or from the command line:
 
 chmod +x /path/firefox-installer.sh
 
