@@ -162,7 +162,7 @@ archi=$(ls | grep firefox-*.tar.bz2)
 echo "Extracting $archi..."
 tar -jxf firefox-*.tar.bz2
 
-echo "Starting installation..."
+echo "Starting instalation..."
 echo "Copying \"firefox\" to /opt..."
 cp -rf firefox /opt
 echo "Creating the symbolic link in /usr/bin..."
@@ -177,4 +177,4 @@ touch /usr/share/applications/firefox.desktop
 echo -e "\n[Desktop Entry]\nName=Mozilla Firefox\nComment=Firefox-Browser\nExec=/usr/bin/firefox\nIcon=/usr/share/pixmaps/firefox.png\nTerminal=false" > /usr/share/applications/firefox.desktop
 echo -e "Type=Application\nCategories=Network;\nStartupNotify=false;\nName[en_US]=Mozilla Firefox" >> /usr/share/applications/firefox.desktop
 update-menus
-echo "Installation Complete."
+echo "Installation finished."
