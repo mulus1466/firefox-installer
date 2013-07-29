@@ -31,7 +31,6 @@
 #
 # We have no relationship with Firefox(mozilla.org/firefox) or Mozilla(mozilla.org).
 
-source en.tf
 ROOT_UID=0
 len=$(echo $LANG | cut -d '_' -f 1)
 arq=$(getconf LONG_BIT)
@@ -49,8 +48,11 @@ idi=$(<"${INPUT}")
 if [ "$idi" == "English" ]
 then
 	source en.tf
-else
+elif [ "$idi" == "Spanish" ]
+then
 	source es.tf
+else
+	source en.tf
 fi
 
 dialog --colors --title 'Firefox Installer' --msgbox "$mes1." 12 65
