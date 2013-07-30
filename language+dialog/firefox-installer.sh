@@ -47,12 +47,12 @@ idi=$(<"${INPUT}")
 
 if [ "$idi" == "English" ]
 then
-	source en.tf
+	source translations/en.tf
 elif [ "$idi" == "Spanish" ]
 then
-	source es.tf
+	source translations/es.tf
 else
-	source en.tf
+	source translations/en.tf
 fi
 
 dialog --colors --title 'Firefox Installer' --msgbox "$mes1." 12 65
