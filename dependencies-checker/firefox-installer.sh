@@ -55,8 +55,8 @@ case $dia in
 		exit ;;
 	esac ;;
 	1 ) ;;
-	* )echo "Exiting from the script..."
-	exit ;;
+#	* )echo "Exiting from the script..."
+#	exit ;;
 esac
 
 case $wge in
@@ -69,8 +69,8 @@ case $wge in
 		exit ;;
 	esac ;;
 	1 ) ;;
-	* )echo "Exiting from the script..."
-	exit ;;
+#	* )echo "Exiting from the script..."
+#	exit ;;
 esac
 
 case $men in
@@ -83,8 +83,8 @@ case $men in
 		exit ;;
 	esac ;;
 	1 ) ;;
-	* )echo "Exiting from the script..."
-	exit ;;
+#	* )echo "Exiting from the script..."
+#	exit ;;
 esac
 
 dialog --title 'Firefox Installer' --menu "Chouse a language for the instalation :" 12 65 2 English "English" Spanish "Español" 2>"${INPUT}"
@@ -93,12 +93,12 @@ idi=$(<"${INPUT}")
 
 if [ "$idi" == "English" ]
 then
-	source translations/en.tf
+	source en.tf
 elif [ "$idi" == "Spanish" ]
 then
-	source translations/es.tf
+	source es.tf
 else
-	source translations/en.tf
+	source en.tf
 fi
 
 dialog --colors --title 'Firefox Installer' --msgbox "$mes1." 12 65
