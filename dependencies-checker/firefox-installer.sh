@@ -47,7 +47,7 @@ INPUT="/tmp/menu.sh"
 
 case $dia in
 	0 )
-	echo "The program \"dialog\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" $yn
+	read -p "The program \"dialog\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" $yn
 	case $yn in
 		[Yy]* ) apt-get install dialog ;;
 		* )
@@ -55,13 +55,13 @@ case $dia in
 		exit ;;
 	esac ;;
 	1 ) ;;
-#	* )echo "Exiting from the script..."
-#	exit ;;
+	* )echo "Exiting from the script..."
+	exit ;;
 esac
 
 case $wge in
 	0 )
-	echo "The program \"wget\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" $yn
+	read -p "The program \"wget\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" $yn
 	case $yn in
 		[Yy]* ) apt-get install wget ;;
 		* )
@@ -69,13 +69,13 @@ case $wge in
 		exit ;;
 	esac ;;
 	1 ) ;;
-#	* )echo "Exiting from the script..."
-#	exit ;;
+	* )echo "Exiting from the script..."
+	exit ;;
 esac
 
 case $men in
 	0 )
-	echo "The program \"menu\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" $yn
+	read -p "The program \"menu\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" $yn
 	case $yn in
 		[Yy]* ) apt-get install menu ;;
 		* )
@@ -83,9 +83,10 @@ case $men in
 		exit ;;
 	esac ;;
 	1 ) ;;
-#	* )echo "Exiting from the script..."
-#	exit ;;
+	* )echo "Exiting from the script..."
+	exit ;;
 esac
+
 
 dialog --title 'Firefox Installer' --menu "Chouse a language for the instalation :" 12 65 2 English "English" Spanish "Español" 2>"${INPUT}"
 
@@ -93,12 +94,12 @@ idi=$(<"${INPUT}")
 
 if [ "$idi" == "English" ]
 then
-	source en.tf
+	source translations/en.tf
 elif [ "$idi" == "Spanish" ]
 then
-	source es.tf
+	source translations/es.tf
 else
-	source en.tf
+	source translations/en.tf
 fi
 
 dialog --colors --title 'Firefox Installer' --msgbox "$mes1." 12 65
