@@ -47,44 +47,38 @@ INPUT="/tmp/menu.sh"
 
 case $dia in
 	0 )
-	read -p "The program \"dialog\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" $yn
+	read -p "The program \"dialog\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" yn
 	case $yn in
 		[Yy]* ) apt-get install dialog ;;
 		* )
 		echo "Exiting from the script..."
 		exit ;;
 	esac ;;
-	1 ) ;;
-	* )echo "Exiting from the script..."
-	exit ;;
+	* ) ;;
 esac
 
 case $wge in
 	0 )
-	read -p "The program \"wget\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" $yn
+	read -p "The program \"wget\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" yn
 	case $yn in
 		[Yy]* ) apt-get install wget ;;
 		* )
 		echo "Exiting from the script..."
 		exit ;;
 	esac ;;
-	1 ) ;;
-	* )echo "Exiting from the script..."
-	exit ;;
+	* ) ;;
 esac
 
 case $men in
 	0 )
-	read -p "The program \"menu\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" $yn
+	read -p "The program \"menu\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" yn
 	case $yn in
 		[Yy]* ) apt-get install menu ;;
 		* )
 		echo "Exiting from the script..."
 		exit ;;
 	esac ;;
-	1 ) ;;
-	* )echo "Exiting from the script..."
-	exit ;;
+	* ) ;;
 esac
 
 
