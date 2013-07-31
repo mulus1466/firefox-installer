@@ -47,7 +47,7 @@ INPUT="/tmp/menu.sh"
 
 case $dia in
 	0 )
-	read -p "The program \"dialog\" (a dependency of this script) is not installed, do you want to install it? (yes/no) :" yn
+	read -p "The program \"dialog\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" yn
 	case $yn in
 		[Yy]* ) apt-get install dialog ;;
 		* )
@@ -59,7 +59,7 @@ esac
 
 case $wge in
 	0 )
-	read -p "The program \"wget\" (a dependency of this script) is not installed, do you want to install it? (yes/no) :" yn
+	read -p "The program \"wget\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" yn
 	case $yn in
 		[Yy]* ) apt-get install wget ;;
 		* )
@@ -71,7 +71,7 @@ esac
 
 case $men in
 	0 )
-	read -p "The program \"menu\" (a dependency of this script) is not installed, do you want to install it? (yes/no) :" yn
+	read -p "The program \"menu\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" yn
 	case $yn in
 		[Yy]* ) apt-get install menu ;;
 		* )
@@ -82,7 +82,7 @@ case $men in
 esac
 
 
-dialog --title 'Firefox Installer' --menu "Choose a language for the installation :" 12 65 2 English "English" Spanish "Español" 2>"${INPUT}"
+dialog --title 'Firefox Installer' --menu "Chouse a language for the instalation :" 12 65 2 English "English" Spanish "Español" 2>"${INPUT}"
 
 idi=$(<"${INPUT}")
 
