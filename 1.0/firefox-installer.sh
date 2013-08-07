@@ -58,7 +58,7 @@ fi
 
 case $dia in
 	0 )
-	read -p "The program \"dialog\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" yn
+	read -p "The program \"dialog\" (A dependency of this script) is not installed, do you want to install it? (yes/no) :" yn
 	case $yn in
 		[Yy]* ) apt-get install dialog ;;
 		* )
@@ -69,7 +69,7 @@ esac
 
 case $wge in
 	0 )
-	read -p "The program \"wget\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" yn
+	read -p "The program \"wget\" (A dependency of this script) is not installed, do you want to install it? (yes/no) :" yn
 	case $yn in
 		[Yy]* ) apt-get install wget ;;
 		* )
@@ -80,7 +80,7 @@ esac
 
 case $men in
 	0 )
-	read -p "The program \"menu\" (a dependencie of this script) is not installed, do you want to install it? (yes/no) :" yn
+	read -p "The program \"menu\" (A dependency of this script) is not installed, do you want to install it? (yes/no) :" yn
 	case $yn in
 		[Yy]* ) apt-get install menu ;;
 		* )
@@ -90,7 +90,7 @@ case $men in
 esac
 
 
-dialog --title 'Firefox Installer' --menu "Chouse a language for the instalation :" 12 65 2 English "English" Spanish "Español" 2>"${INPUT}"
+dialog --title 'Firefox Installer' --menu "Choose a language for the installation :" 12 65 2 English "English" Spanish "Español" 2>"${INPUT}"
 
 idi=$(<"${INPUT}")
 
@@ -127,7 +127,7 @@ fi
 
 if [ $(ls -a $cwd | grep .firefox-installer | wc -l) == 1 ]
 then
-	dialog --colors --title 'Firefox Installer' --yesno "$mes7" 12 65 #The directory $cwd/.firefox-installer already exists, do you want to delete it to continue? (Your Firefox configuration is in ~/.mozilla, so, you dont have to worrie about loosing anything)
+	dialog --colors --title 'Firefox Installer' --yesno "$mes7" 12 65 #The directory $cwd/.firefox-installer already exists, do you want to delete it to continue? (Your Firefox configuration is in ~/.mozilla, so, you don't have to worry about losing anything.)
 	if [ "$?" != 0 ]
 	then
 		dialog --colors --title 'Firefox Installer' --infobox "$mes6" 12 65 #Exiting from the script...
@@ -169,7 +169,7 @@ case $? in
 	German  "Deutsch" 2>>"${INPUT}"
 	len=$(<"${INPUT}")
 	
-	dialog --colors --title 'Firefox Installer' --menu "$mes15 :" 12 65 2\  #Architecture (If you're not sure, chouse 32)
+	dialog --colors --title 'Firefox Installer' --menu "$mes15 :" 12 65 2\  #Architecture (If you're not sure, choose 32-bit.)
 	32 "32 bits system"\
 	64 "64 bits system" 2>>"${INPUT}"
 	arq=$(<"${INPUT}")
@@ -219,7 +219,7 @@ archi=$(ls | grep firefox-*.tar.bz2)
 dialog --colors --title 'Firefox Installer' --infobox "$mes17 $archi" 12 65 #Extracting
 tar -jxf firefox-*.tar.bz2
 
-dialog --colors --title 'Firefox Installer' --infobox "$mes18" 12 65 #Starting instalation...
+dialog --colors --title 'Firefox Installer' --infobox "$mes18" 12 65 #Starting installation...
 cp -rf firefox /opt
 if [ $(ls /usr/bin | grep firefox | wc -l) == 1 ]
 then
