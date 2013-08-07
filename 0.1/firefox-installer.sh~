@@ -64,11 +64,11 @@ then
 		* ) echo "Exiting from the script..."
 		exit;;
 	esac
-	rm -rf "$cwd/.firefox-installer"
+	rm -rf $cwd/.firefox-installer
 fi
-mkdir "$cwd/.firefox-installer"
+mkdir $cwd/.firefox-installer
 echo "Directory $cwd/.firefox-installer created."
-cd "$cwd/.firefox-installer"
+cd $cwd/.firefox-installer
 echo "System information:"
 echo "Language: $len"
 echo "Architecture: $arq"
