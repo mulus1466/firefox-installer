@@ -1,5 +1,5 @@
 mes1="Hello! And welcome to the Firefox Installer, a script designed to make the Firefox installation easier on Debian"
-mes2="To run this script you must run it as a super user. (root)"
+mes2="To run this script you must run it as a super user (root)"
 mes3="Firefox installer will create the folder .firefox-installer in $HOME. Is this ok?"
 mes4="Do you want to manually create the directory?"
 mes5="Directory: (Example: /home/foo)"
