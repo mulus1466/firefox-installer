@@ -36,11 +36,11 @@ len=$(echo $LANG | cut -d '_' -f 1)
 arq=$(getconf LONG_BIT)
 
 clear
-echo "Hallo! And welcome to the Firefox Installer, a script designed to make the Firefox installation easier on Debian."
+echo "Hello! And welcome to the Firefox Installer, a script designed to make the Firefox installation easier on Debian."
 
 if [ "$UID" -ne "$ROOT_UID" ]
 then
-	echo "To run this script you must run it like a super user (root)."
+	echo "To run this script you must run it as a super user (root)."
 	sleep 5
 	exit
 else
@@ -58,7 +58,7 @@ case $resd in
 esac
 if [ $(ls -a $cwd | grep ".firefox-installer" | wc -l) == 1 ]
 then
-	read -p "the directory $cwd/.firefox-installer already exists, do you want to delete it and continue? (yes/no) :" resb
+	read -p "The directory $cwd/.firefox-installer already exists, do you want to delete it and continue? (yes/no) :" resb
 	case $resb in
 		[Yy]* ) echo "$cwd/.firefox-installer deleted.";;
 		* ) echo "Exiting from the script..."
@@ -85,7 +85,7 @@ case $res in
 		[Ff][Rr]* ) len=fr ;;
 		[Ii][Tt]* ) len=it ;;
 		[Dd][Ee]* ) len=de ;;
-		* ) read -p "That Language is not supported by the script. Do you want to use the English version instead? (yes/no) : " resi
+		* ) read -p "That Language is not currently supported by the script. Do you want to use the English version instead? (yes/no) : " resi
 		case $resd in
 			[Yy]* ) len=en;;
 			[Nn]* ) echo "Exiting from the script..."
