@@ -228,7 +228,7 @@ fi
 ln -s /opt/firefox/firefox /usr/bin/firefox
 cp /opt/firefox/browser/icons/mozicon128.png /usr/share/pixmaps/firefox.png
 touch /usr/share/applications/firefox.desktop
-echo -e "\n[Desktop Entry]\nName=Mozilla Firefox\nComment=Firefox-Browser\nExec=/usr/bin/firefox\nIcon=/usr/share/pixmaps/firefox.png\nTerminal=false" > /usr/share/applications/firefox.desktop
+echo -e "\n[Desktop Entry]\nName=Mozilla Firefox\nComment=Firefox-Browser\nExec=/usr/bin/firefox\nIcon=firefox\nTerminal=false" > /usr/share/applications/firefox.desktop
 echo -e "Type=Application\nCategories=Network;\nStartupNotify=false;\nName[en_US]=Mozilla Firefox" >> /usr/share/applications/firefox.desktop
 update-menus
 dialog --colors --title 'Firefox Installer' --infobox "$mes19" 12 65 #Installation finished
