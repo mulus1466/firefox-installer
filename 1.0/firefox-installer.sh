@@ -134,8 +134,6 @@ then
 		exit
 	fi
 	rm -rf $cwd/.firefox-installer
-else
-	exit
 fi
 
 mkdir $cwd/.firefox-installer
